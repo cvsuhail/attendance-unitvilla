@@ -1,22 +1,15 @@
 import styles from './report.module.css';
 import clsx from 'clsx';
 
-interface DailyRecord {
-    date: string;
+export interface DailyRecord {
+    date: string;       // e.g. "14 Jan, Wed"
     checkIn: string;
     checkOut: string;
     total: string;
     status: 'Present' | 'Absent' | 'Late';
 }
 
-const records: DailyRecord[] = [
-    { date: '14 Jan, Wed', checkIn: '09:32 AM', checkOut: '06:12 PM', total: '8.4h', status: 'Present' },
-    { date: '13 Jan, Tue', checkIn: '09:45 AM', checkOut: '06:30 PM', total: '8.5h', status: 'Late' },
-    { date: '12 Jan, Mon', checkIn: '09:00 AM', checkOut: '06:00 PM', total: '9.0h', status: 'Present' },
-    { date: '11 Jan, Sun', checkIn: '-', checkOut: '-', total: '-', status: 'Absent' },
-];
-
-export default function DailyList() {
+export default function DailyList({ records }: { records: DailyRecord[] }) {
     return (
         <div className={styles.listContainer}>
             <header className={styles.listHeader}>
@@ -25,7 +18,6 @@ export default function DailyList() {
             </header>
 
             <div className={styles.dateGroup}>
-                <div className={styles.dateSticky}>Week 2 - Jan 2026</div>
                 {records.map((record, idx) => (
                     <div key={idx} className={clsx(styles.attendanceCard, styles[`status${record.status}`])}>
                         <div className={styles.row}>

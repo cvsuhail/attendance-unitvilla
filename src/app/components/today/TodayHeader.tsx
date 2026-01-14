@@ -1,22 +1,39 @@
 "use client";
 
-import { useState } from 'react';
 import styles from './today.module.css';
 import clsx from 'clsx';
+import { useMemo } from 'react';
 
-export default function TodayHeader() {
-    const [selectedDay, setSelectedDay] = useState(14); // Mock selected day
+interface TodayHeaderProps {
+    selectedDate: Date;
+    onDateChange: (date: Date) => void;
+}
 
-    // Mock days around current date
-    const days = [
-        { num: 11, name: 'Sun' },
-        { num: 12, name: 'Mon' },
-        { num: 13, name: 'Tue' },
-        { num: 14, name: 'Wed' },
-        { num: 15, name: 'Thu' },
-        { num: 16, name: 'Fri' },
-        { num: 17, name: 'Sat' },
-    ];
+export default function TodayHeader({ selectedDate, onDateChange }: TodayHeaderProps) {
+    const days = useMemo(() => {
+        const today = new Date();
+        const dates = [];
+        // Show last 7 days ending with today? Or centered? 
+        // User requesting "don't show future dates".
+        // Let's show today and previous 6 days.
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(today);
+            d.setDate(today.getDate() - i);
+            dates.push({
+                date: d,
+                num: d.getDate(),
+                name: d.toLocaleDateString('en-US', { weekday: 'short' }),
+                isFuture: d > today
+            });
+        }
+        return dates;
+    }, []);
+
+    const isSameDay = (d1: Date, d2: Date) => {
+        return d1.getDate() === d2.getDate() &&
+            d1.getMonth() === d2.getMonth() &&
+            d1.getFullYear() === d2.getFullYear();
+    };
 
     return (
         <>
@@ -24,20 +41,25 @@ export default function TodayHeader() {
                 <div className={styles.welcomeText}>Good Morning,</div>
                 <h1 className={styles.welcome}>Amina Abdulla</h1>
                 <div className={styles.dateRow}>
-                    <span className={styles.currentDate}>Wed, 14 Jan 2026</span>
+                    <span className={styles.currentDate}>
+                        {selectedDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })}
+                    </span>
                     <span className={clsx(styles.statusPill, styles.statusPresent)}>Present</span>
                 </div>
             </div>
 
             <div className={styles.daySelector}>
-                {days.map((day) => (
+                {days.map((dayItem) => (
                     <div
-                        key={day.num}
-                        className={clsx(styles.dayItem, selectedDay === day.num && styles.dayItemActive)}
-                        onClick={() => setSelectedDay(day.num)}
+                        key={dayItem.num}
+                        className={clsx(
+                            styles.dayItem,
+                            isSameDay(selectedDate, dayItem.date) && styles.dayItemActive
+                        )}
+                        onClick={() => onDateChange(dayItem.date)}
                     >
-                        <span className={styles.dayName}>{day.name}</span>
-                        <span className={styles.dayNumber}>{day.num}</span>
+                        <span className={styles.dayName}>{dayItem.name}</span>
+                        <span className={styles.dayNumber}>{dayItem.num}</span>
                     </div>
                 ))}
             </div>

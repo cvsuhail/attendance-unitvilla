@@ -1,16 +1,23 @@
 import styles from './report.module.css';
 
-export default function MonthlySummary() {
-    const stats = [
-        { label: 'Working Days', value: '22' },
-        { label: 'Total Hours', value: '184.5' },
-        { label: 'Leaves Taken', value: '1' },
-        { label: 'Late Days', value: '2' },
+export interface MonthlyStats {
+    workingDays: number;
+    totalHours: number;
+    leavesTaken: number;
+    lateDays: number;
+}
+
+export default function MonthlySummary({ stats }: { stats: MonthlyStats }) {
+    const summaryItems = [
+        { label: 'Working Days', value: stats.workingDays.toString() },
+        { label: 'Total Hours', value: stats.totalHours.toFixed(1) },
+        { label: 'Leaves Taken', value: stats.leavesTaken.toString() },
+        { label: 'Late Days', value: stats.lateDays.toString() },
     ];
 
     return (
         <div className={styles.summaryGrid}>
-            {stats.map((stat, idx) => (
+            {summaryItems.map((stat, idx) => (
                 <div key={idx} className={styles.summaryCard}>
                     <div className={styles.summaryLabel}>{stat.label}</div>
                     <div className={styles.summaryValue}>{stat.value}</div>

@@ -3,14 +3,14 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 import styles from './insights.module.css';
 
-const data = [
-    { name: 'Present', value: 20, color: '#4f46e5' },
-    { name: 'Absent', value: 2, color: '#ef4444' },
-    { name: 'Half Day', value: 1, color: '#f59e0b' },
-    { name: 'Leave', value: 1, color: '#94a3b8' },
-];
+export interface AttendanceRatioData {
+    name: string;
+    value: number;
+    color: string;
+    [key: string]: any;
+}
 
-export default function AttendanceRatio() {
+export default function AttendanceRatio({ data }: { data: AttendanceRatioData[] }) {
     return (
         <div className={styles.chartContainer}>
             <div className={styles.chartHeader}>

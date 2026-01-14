@@ -1,0 +1,287 @@
+[debug] [2026-01-14T07:01:01.638Z] ----------------------------------------------------------------------
+[debug] [2026-01-14T07:01:01.639Z] Command:       /Users/cvsuhail/.nvm/versions/node/v20.19.5/bin/node /Users/cvsuhail/.nvm/versions/node/v20.19.5/bin/firebase functions:shell
+[debug] [2026-01-14T07:01:01.640Z] CLI Version:   15.2.1
+[debug] [2026-01-14T07:01:01.640Z] Platform:      darwin
+[debug] [2026-01-14T07:01:01.640Z] Node Version:  v20.19.5
+[debug] [2026-01-14T07:01:01.640Z] Time:          Wed Jan 14 2026 12:31:01 GMT+0530 (India Standard Time)
+[debug] [2026-01-14T07:01:01.640Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-14T07:01:02.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-14T07:01:02.146Z] > authorizing via signed-in user (info.awwads@gmail.com)
+[debug] [2026-01-14T07:01:02.146Z] [iam] checking project attendance-5d624 for permissions ["firebase.projects.get"]
+[debug] [2026-01-14T07:01:02.147Z] Checked if tokens are valid: true, expires at: 1768377025384
+[debug] [2026-01-14T07:01:02.147Z] Checked if tokens are valid: true, expires at: 1768377025384
+[debug] [2026-01-14T07:01:02.147Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/attendance-5d624:testIamPermissions [none]
+[debug] [2026-01-14T07:01:02.147Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/attendance-5d624:testIamPermissions x-goog-quota-user=projects/attendance-5d624
+[debug] [2026-01-14T07:01:02.147Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/attendance-5d624:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-01-14T07:01:03.751Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/attendance-5d624:testIamPermissions 200
+[debug] [2026-01-14T07:01:03.751Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/attendance-5d624:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] ⚠  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2026-01-14T07:01:03.896Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-01-14T07:01:03.902Z] defaultcredentials: writing to file /Users/cvsuhail/.config/firebase/info_awwads_gmail.com_application_default_credentials.json
+[debug] [2026-01-14T07:01:03.903Z] DEBUG: Setting GAC to /Users/cvsuhail/.config/firebase/info_awwads_gmail.com_application_default_credentials.json
+[debug] [2026-01-14T07:01:03.903Z] Checked if tokens are valid: true, expires at: 1768377025384
+[debug] [2026-01-14T07:01:03.903Z] Checked if tokens are valid: true, expires at: 1768377025384
+[debug] [2026-01-14T07:01:03.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/attendance-5d624/adminSdkConfig [none]
+[debug] [2026-01-14T07:01:04.470Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/attendance-5d624/adminSdkConfig 200
+[debug] [2026-01-14T07:01:04.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/attendance-5d624/adminSdkConfig {"projectId":"attendance-5d624","storageBucket":"attendance-5d624.firebasestorage.app"}
+[debug] [2026-01-14T07:01:04.480Z] [functions] Watching "/Users/cvsuhail/Projects/unifiedSystem/attendance/functions" for Cloud Functions...
+[debug] [2026-01-14T07:01:04.482Z] Validating nodejs source
+[debug] [2026-01-14T07:01:05.003Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0"
+  },
+  "private": true
+}
+[debug] [2026-01-14T07:01:05.003Z] Building nodejs source
+[debug] [2026-01-14T07:01:05.003Z] Failed to find version of module node: reached end of search path /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2026-01-14T07:01:05.004Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-14T07:01:05.011Z] Found firebase-functions binary at '/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8446
+
+[debug] [2026-01-14T07:01:05.255Z] Got response from /__/functions.yaml {"endpoints":{"attendanceWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"attendanceWebhook"},"seedAttendanceData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"seedAttendanceData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-01-14T07:01:09.271Z] [functions] Loaded functions definitions from source: attendanceWebhook, seedAttendanceData.
+[debug] [2026-01-14T07:01:09.272Z] [functions[us-central1-attendanceWebhook]] http function initialized (http://127.0.0.1:5001/attendance-5d624/us-central1/attendanceWebhook).
+[debug] [2026-01-14T07:01:09.272Z] [functions[us-central1-seedAttendanceData]] http function initialized (http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData).
+[info] i  functions: Loaded functions: attendanceWebhook, seedAttendanceData 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2026-01-14T07:01:32.031Z] >>> [apiv2][query] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ [none]
+[debug] [2026-01-14T07:01:32.035Z] [work-queue] {"queuedWork":["/attendance-5d624/us-central1/seedAttendanceData/-2026-01-14T07:01:32.035Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-01-14T07:01:32.036Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/attendance-5d624/us-central1/seedAttendanceData/-2026-01-14T07:01:32.035Z"],"workRunningCount":1}
+[debug] [2026-01-14T07:01:32.036Z] Accepted request GET /attendance-5d624/us-central1/seedAttendanceData/ --> us-central1-seedAttendanceData
+[debug] [2026-01-14T07:01:32.036Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-01-14T07:01:32.036Z] DEBUG: [functions] Got req.url=/attendance-5d624/us-central1/seedAttendanceData/, mapping to path=/
+[debug] [2026-01-14T07:01:32.038Z] DEBUG: [worker-pool] addWorker(us-central1-seedAttendanceData)
+[debug] [2026-01-14T07:01:32.039Z] DEBUG: [worker-pool] Adding worker with key us-central1-seedAttendanceData, total=1
+[debug] [2026-01-14T07:01:32.488Z] DEBUG: [runtime-status] [31437] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-01-14T07:01:32.489Z] DEBUG: [runtime-status] [31437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:01:32.489Z] DEBUG: [runtime-status] [31437] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2026-01-14T07:01:32.489Z] DEBUG: [runtime-status] [31437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:01:32.489Z] DEBUG: [runtime-status] [31437] Detected firebase-functions v7+, skipping legacy stubs.
+[debug] [2026-01-14T07:01:32.489Z] DEBUG: [runtime-status] [31437] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-01-14T07:01:32.512Z] DEBUG: [runtime-status] [31437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:01:32.629Z] DEBUG: [runtime-status] [31437] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2026-01-14T07:01:32.630Z] DEBUG: [runtime-status] [31437] initializeApp(DEFAULT) {"storageBucket":"attendance-5d624.firebasestorage.app","projectId":"attendance-5d624"}
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2026-01-14T07:01:32.635Z] DEBUG: [runtime-status] [31437] Functions runtime initialized. {"cwd":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions","node_version":"20.19.5"}
+[debug] [2026-01-14T07:01:32.635Z] DEBUG: [runtime-status] [31437] Listening to port: /var/folders/sd/4pwm9xrs67vdb7r0w7t64v7h0000gn/T/fire_emu_2895ccaf67bec7cd.sock
+[debug] [2026-01-14T07:01:32.654Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: IDLE
+[debug] [2026-01-14T07:01:32.654Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-seedAttendanceData)
+[debug] [2026-01-14T07:01:32.654Z] [functions] Beginning execution of "us-central1-seedAttendanceData"
+[debug] [2026-01-14T07:01:32.655Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: BUSY
+[info] >  Error seeding data: Cannot read properties of undefined (reading 'serverTimestamp') TypeError: Cannot read properties of undefined (reading 'serverTimestamp') {"user":"Error seeding data: Cannot read properties of undefined (reading 'serverTimestamp') TypeError: Cannot read properties of undefined (reading 'serverTimestamp')","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m Error seeding data: Cannot read properties of undefined (reading 'serverTimestamp') TypeError: Cannot read properties of undefined (reading 'serverTimestamp')"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js:91:55 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js:91:55","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js:91:55"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/common/providers/https.js:566:10 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/common/providers/https.js:566:10","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/common/providers/https.js:566:10"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:67:14 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:67:14","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:67:14"}}
+[info] >      at cors (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:188:7) {"user":"    at cors (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:188:7)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at cors (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:188:7)"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:224:17 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:224:17","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:224:17"}}
+[info] >      at originCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:214:15) {"user":"    at originCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:214:15)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at originCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:214:15)"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:219:13 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:219:13","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:219:13"}}
+[info] >      at optionsCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:199:9) {"user":"    at optionsCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:199:9)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at optionsCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:199:9)"}}
+[info] >      at corsMiddleware (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:204:7) {"user":"    at corsMiddleware (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:204:7)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at corsMiddleware (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:204:7)"}}
+[info] >      at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:66:5 {"user":"    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:66:5","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:66:5"}}
+[debug] [2026-01-14T07:01:32.672Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-01-14T07:01:32.672Z] [functions] Finished "us-central1-seedAttendanceData" in 17.682291ms
+[debug] [2026-01-14T07:01:32.672Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: IDLE
+[debug] [2026-01-14T07:01:32.672Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-01-14T07:01:32.672Z] DEBUG: Finishing up request with event=close
+[debug] [2026-01-14T07:01:32.672Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-01-14T07:01:32.673Z] <<< [apiv2][status] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ 500
+[debug] [2026-01-14T07:01:32.673Z] <<< [apiv2][body] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ {"error":"Internal Server Error","message":"Cannot read properties of undefined (reading 'serverTimestamp')","stack":"TypeError: Cannot read properties of undefined (reading 'serverTimestamp')\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js:91:55\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/common/providers/https.js:566:10\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:67:14\n    at cors (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:188:7)\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:214:15)\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/cors/lib/index.js:204:7)\n    at /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/providers/https.js:66:5"}
+[debug] [2026-01-14T07:02:26.201Z] DEBUG: File /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js.map changed, reloading triggers
+[debug] [2026-01-14T07:02:26.201Z] DEBUG: File /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js changed, reloading triggers
+[debug] [2026-01-14T07:02:27.203Z] Validating nodejs source
+[debug] [2026-01-14T07:02:28.083Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0"
+  },
+  "private": true
+}
+[debug] [2026-01-14T07:02:28.083Z] Building nodejs source
+[debug] [2026-01-14T07:02:28.083Z] Failed to find version of module node: reached end of search path /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2026-01-14T07:02:28.084Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-14T07:02:28.085Z] Found firebase-functions binary at '/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8384
+
+[debug] [2026-01-14T07:02:28.441Z] Got response from /__/functions.yaml {"endpoints":{"attendanceWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"attendanceWebhook"},"seedAttendanceData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"seedAttendanceData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-01-14T07:02:32.450Z] [functions] Loaded functions definitions from source: attendanceWebhook, seedAttendanceData.
+[debug] [2026-01-14T07:02:32.450Z] DEBUG: [worker-pool] Shutting down IDLE worker (us-central1-seedAttendanceData)
+[debug] [2026-01-14T07:02:32.450Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: FINISHING
+[debug] [2026-01-14T07:02:32.452Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: exited
+[debug] [2026-01-14T07:02:32.452Z] DEBUG: [worker-us-central1-seedAttendanceData-f268473f-8ceb-4a84-a946-45f6cfb736e9]: FINISHED
+[debug] [2026-01-14T07:02:46.251Z] DEBUG: File /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/src/index.ts changed, reloading triggers
+[debug] [2026-01-14T07:02:47.253Z] Validating nodejs source
+[debug] [2026-01-14T07:02:47.805Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0"
+  },
+  "private": true
+}
+[debug] [2026-01-14T07:02:47.805Z] Building nodejs source
+[debug] [2026-01-14T07:02:47.805Z] Failed to find version of module node: reached end of search path /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2026-01-14T07:02:47.805Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-14T07:02:47.806Z] Found firebase-functions binary at '/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8858
+
+[debug] [2026-01-14T07:02:48.081Z] Got response from /__/functions.yaml {"endpoints":{"attendanceWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"attendanceWebhook"},"seedAttendanceData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"seedAttendanceData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-01-14T07:02:52.090Z] [functions] Loaded functions definitions from source: attendanceWebhook, seedAttendanceData.
+[debug] [2026-01-14T07:03:00.028Z] DEBUG: File /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js.map changed, reloading triggers
+[debug] [2026-01-14T07:03:00.028Z] DEBUG: File /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/lib/index.js changed, reloading triggers
+[debug] [2026-01-14T07:03:01.029Z] Validating nodejs source
+[debug] [2026-01-14T07:03:01.542Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0"
+  },
+  "private": true
+}
+[debug] [2026-01-14T07:03:01.542Z] Building nodejs source
+[debug] [2026-01-14T07:03:01.542Z] Failed to find version of module node: reached end of search path /Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2026-01-14T07:03:01.542Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-14T07:03:01.543Z] Found firebase-functions binary at '/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8500
+
+[debug] [2026-01-14T07:03:01.942Z] Got response from /__/functions.yaml {"endpoints":{"attendanceWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"attendanceWebhook"},"seedAttendanceData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"seedAttendanceData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-01-14T07:03:05.951Z] [functions] Loaded functions definitions from source: attendanceWebhook, seedAttendanceData.
+[debug] [2026-01-14T07:03:44.617Z] >>> [apiv2][query] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ [none]
+[debug] [2026-01-14T07:03:44.629Z] [work-queue] {"queuedWork":["/attendance-5d624/us-central1/seedAttendanceData/-2026-01-14T07:03:44.628Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-01-14T07:03:44.629Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/attendance-5d624/us-central1/seedAttendanceData/-2026-01-14T07:03:44.628Z"],"workRunningCount":1}
+[debug] [2026-01-14T07:03:44.630Z] Accepted request GET /attendance-5d624/us-central1/seedAttendanceData/ --> us-central1-seedAttendanceData
+[debug] [2026-01-14T07:03:44.631Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-01-14T07:03:44.632Z] DEBUG: [functions] Got req.url=/attendance-5d624/us-central1/seedAttendanceData/, mapping to path=/
+[debug] [2026-01-14T07:03:44.632Z] DEBUG: [worker-pool] Cleaned up workers for us-central1-seedAttendanceData: 1 --> 0
+[debug] [2026-01-14T07:03:44.633Z] DEBUG: [worker-pool] addWorker(us-central1-seedAttendanceData)
+[debug] [2026-01-14T07:03:44.633Z] DEBUG: [worker-pool] Adding worker with key us-central1-seedAttendanceData, total=1
+[debug] [2026-01-14T07:03:45.273Z] DEBUG: [runtime-status] [32268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-01-14T07:03:45.274Z] DEBUG: [runtime-status] [32268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:03:45.274Z] DEBUG: [runtime-status] [32268] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2026-01-14T07:03:45.274Z] DEBUG: [runtime-status] [32268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:03:45.274Z] DEBUG: [runtime-status] [32268] Detected firebase-functions v7+, skipping legacy stubs.
+[debug] [2026-01-14T07:03:45.274Z] DEBUG: [runtime-status] [32268] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-01-14T07:03:45.297Z] DEBUG: [runtime-status] [32268] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.0.3","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-functions/lib/v2/index.js"}
+[debug] [2026-01-14T07:03:45.416Z] DEBUG: [runtime-status] [32268] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.6.0","resolution":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2026-01-14T07:03:45.417Z] DEBUG: [runtime-status] [32268] initializeApp(DEFAULT) {"storageBucket":"attendance-5d624.firebasestorage.app","projectId":"attendance-5d624"}
+[debug] [2026-01-14T07:03:45.423Z] DEBUG: [runtime-status] [32268] Functions runtime initialized. {"cwd":"/Users/cvsuhail/Projects/unifiedSystem/attendance/functions","node_version":"20.19.5"}
+[debug] [2026-01-14T07:03:45.423Z] DEBUG: [runtime-status] [32268] Listening to port: /var/folders/sd/4pwm9xrs67vdb7r0w7t64v7h0000gn/T/fire_emu_a4ed8f8accf8e76c.sock
+[debug] [2026-01-14T07:03:45.447Z] DEBUG: [worker-us-central1-seedAttendanceData-7383250f-b767-4f2b-a639-702a56b55f9f]: IDLE
+[debug] [2026-01-14T07:03:45.447Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-seedAttendanceData)
+[debug] [2026-01-14T07:03:45.447Z] [functions] Beginning execution of "us-central1-seedAttendanceData"
+[debug] [2026-01-14T07:03:45.447Z] DEBUG: [worker-us-central1-seedAttendanceData-7383250f-b767-4f2b-a639-702a56b55f9f]: BUSY
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-seedAttendanceData"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2026-01-14T07:03:47.909Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-01-14T07:03:47.909Z] [functions] Finished "us-central1-seedAttendanceData" in 2462.29475ms
+[debug] [2026-01-14T07:03:47.909Z] DEBUG: [worker-us-central1-seedAttendanceData-7383250f-b767-4f2b-a639-702a56b55f9f]: IDLE
+[debug] [2026-01-14T07:03:47.909Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-01-14T07:03:47.909Z] DEBUG: Finishing up request with event=close
+[debug] [2026-01-14T07:03:47.909Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-01-14T07:03:47.910Z] <<< [apiv2][status] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ 200
+[debug] [2026-01-14T07:03:47.910Z] <<< [apiv2][body] GET http://127.0.0.1:5001/attendance-5d624/us-central1/seedAttendanceData/ {"success":true,"message":"Seeded Jan 2025 data for CvSuhail"}
