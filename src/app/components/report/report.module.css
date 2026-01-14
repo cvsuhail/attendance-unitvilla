@@ -1,0 +1,195 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 1rem 0 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+/* Month Selector */
+.monthSelector {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    margin: 0 -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scrollbar-width: none;
+}
+
+.monthSelector::-webkit-scrollbar {
+    display: none;
+}
+
+.monthChip {
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    background: white;
+    border: 1px solid var(--color-bg-subtle);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.monthChipActive {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Summary Cards */
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.summaryCard {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.summaryLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.summaryValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+/* Daily List */
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.listTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.exportBtn {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dateGroup {
+    margin-bottom: 1rem;
+}
+
+.dateSticky {
+    position: sticky;
+    top: 0;
+    background: var(--color-bg-body);
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    z-index: 10;
+}
+
+.attendanceCard {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.statusIndicator {
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+    background: var(--color-text-light);
+    /* Default */
+}
+
+.statusPresent .statusIndicator {
+    background: var(--color-success);
+}
+
+.statusAbsent .statusIndicator {
+    background: var(--color-error);
+}
+
+.statusLate .statusIndicator {
+    background: var(--color-warning);
+}
+
+.cardContent {
+    flex: 1;
+    margin-left: 0.75rem;
+}
+
+.dateText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.hoursData {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.25rem;
+}
+
+.timeRange {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.totalDuration {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    background: var(--color-bg-subtle);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}

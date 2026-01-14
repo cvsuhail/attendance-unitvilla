@@ -1,0 +1,284 @@
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.welcomeText {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+.employeeName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.dateRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.currentDate {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.statusPill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statusPresent {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary);
+}
+
+.statusAbsent {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-error);
+}
+
+/* Day Selector */
+.daySelector {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    margin: 0 -1.5rem;
+    /* Negative margin for full bleed swipe */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.daySelector::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.dayItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.5rem;
+    height: 4.5rem;
+    border-radius: var(--radius-xl);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-subtle);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.dayItemActive {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.dayName {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.dayNumber {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* Attendance Card */
+.heroCard {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+}
+
+.totalHours {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.hoursValue {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1;
+}
+
+.hoursLabel {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+}
+
+.timeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    background: var(--color-bg-subtle);
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+}
+
+.timeItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.timeLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.timeValue {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+/* Timeline */
+.timelineContainer {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.timelineTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    /* Align with icon center */
+    top: 1rem;
+    bottom: 3rem;
+    /* Stop before last item */
+    width: 2px;
+    background: var(--color-bg-subtle);
+    z-index: 0;
+}
+
+.timelineItem {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+    opacity: 0.5;
+    transition: opacity var(--transition-normal);
+}
+
+.timelineItem:last-child {
+    padding-bottom: 0;
+}
+
+.timelineItemActive {
+    opacity: 1;
+}
+
+.timelineItemActive .timelineIcon {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.timelineIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-bg-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    /* Above line */
+    flex-shrink: 0;
+    color: var(--color-text-light);
+}
+
+.timelineContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eventTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.eventTime {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
